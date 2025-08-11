@@ -1,22 +1,22 @@
 import React from 'react'
 import Image from 'next/image';
-import NewsLetter from './client/newsLetter';
+import NewsLetter from './client/NewsLetter';
 
 function Footer() {
   const css = 'text-[#777777] text-[1rem]'
   return (
-    <footer className='pt-10'>
+    <footer className='pt-10 '>
       <div className="flex flex-wrap justify-between px-5 columns-md-2 columns-1">
         <div className="news-letter  md:w-[100%] lg:w-[40%]">
           <div className="footer-logo relative ">
             <Image className=" object-cover  z-10 relative" src="/images/logo/logo.png" width={100} height={120} alt="HRN TEch Solutions"></Image>
           </div>
-          <p className='md:w-[50%] lg:w-[100%] my-10 text-[#777777]'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique accusamus consectetur vero soluta corporis pariatur consequuntur. Pariatur voluptates totam sunt. Maiores impedit vel, veniam debitis nostrum ipsam explicabo voluptatum excepturi.</p>
+          <p className='sm:w-[50%] lg:w-[100%] my-10 text-[#777777]'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique accusamus consectetur vero soluta corporis pariatur consequuntur. Pariatur voluptates totam sunt. Maiores impedit vel, veniam debitis nostrum ipsam explicabo voluptatum excepturi.</p>
           <div className="subscribe flex ">
             <NewsLetter/>
           </div>
         </div>
-        <div className="max-w-5xl  py-12 px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="max-w-5xl mt-5 sm:mt-0 py-12 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Contact Us */}
           <div>
             <h2 className="text-2xl font-semibold mb-6">Contact Us</h2>
@@ -49,7 +49,7 @@ function Footer() {
         </div>
 
       </div>
-      <hr className='text-[#777777]'/>
+      <hr className='text-[#777777] mb-5'/>
       <div className={`${css} text-center`}>Copyright &copy; All Right Reserved By HRN Tech Solutions</div>
     </footer>
   )

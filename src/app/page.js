@@ -1,11 +1,15 @@
 import Image from "next/image";
 import Images from '@/components/image'
+import HeroSection from "@/components/Server/HeroSection";
+import AnimatedHeading from "@/components/client/AnimatedHeading";
+import FeaturesSection from "@/components/Server/FeaturesSection";
 
 export default function Home() {
   return (
-    <div className=" h-[150vh] bg-amber-300">
+    <div className="">
       {/* <Images/> */}
-      <section className="pt-10 pb-10"></section>
+      <section className=" pb-10"><HeroSection/></section>
+      <FeaturesSection/>
     </div>
   );
 }

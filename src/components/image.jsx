@@ -4,24 +4,21 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-function Images() {
+function Images({src}) {
 
   const [imageIsLoaded, setImageIsLoaded] = useState(false);
 
   return (
     <motion.div
-      initial={{ 
-                    opacity: 0 }}
-      animate={{ opacity: imageIsLoaded ? 1 : 0 }}
-      transition={{ duration: 5 }}
+    className="w-[100%]"
+    animate={{ scale: [1, 1.2, 1] }} // zoom in, zoom out
+    style={{ transformOrigin: 'right center' }} 
+    transition={{
+      duration: 20,       // full cycle time
+      ease: 'easeInOut', // smooth start/end
+      repeat: Infinity,}}  // loop forever
     >
-      <Image
-        src="/images/1.jpg"
-        alt="Description"
-        width={500}
-        height={300}
-        onLoad={() => setImageIsLoaded(true)}
-      />
+      <img className='w-[100%] z-5' src={src} alt="banner image" />
     </motion.div>
   );
 }
