@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
-import NewsLetter from './client/NewsLetter';
+import NewsLetter from './client/newsLetter';
 
 function Footer() {
   const css = 'text-[#777777] text-[1rem]'
